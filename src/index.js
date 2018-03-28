@@ -9,6 +9,7 @@ import reducers from './reducers';
 
 import BooksList from './components/books_list';
 import ReviewForm from './components/review_form';
+import ReviewList from './components/review_list';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -18,6 +19,7 @@ ReactDOM.render(
       <div>
         <Switch>
           <Route path="/review/new" component={ReviewForm} />
+          <Route path="/review/all" component={ReviewList} />
           <Route path="/" component={BooksList} />
         </Switch>
       </div>

@@ -3,6 +3,7 @@ import axios from 'axios';
 export const FETCH_BOOKS = 'fetch_books';
 export const CREATE_REVIEW = 'create_review';
 export const SELECTED_BOOK = 'selected_book';
+export const FETCH_REVIEWS = 'fetch_reviews';
 
 export function fetchBooks() {
   const nyKey = '4e1a6cdf3826470a9ec10ba51e15938e';
@@ -30,8 +31,18 @@ export function createReview(values, callback) {
 }
 
 export function selectBook(book) {
-  console.log("clicked");  return {
+  console.log("clicked");
+  return {
     type: SELECTED_BOOK,
     payload: book
+  };
+}
+
+export function fetchReviews() {
+  const request = axios.get(`${ROOT_URL}/posts${API_KEY}`);
+
+  return {
+    type: FETCH_REVIEWS,
+    payload: request
   };
 }
