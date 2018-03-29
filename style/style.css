@@ -1,3 +1,7 @@
+body {
+  margin-top: 70px !important;
+}
+
 form label {
   display: block;
 }
@@ -29,4 +33,10 @@ form label {
 
 .article-usual {
   background-color: #c1c4c7;
+}
+
+/* navbar  */
+#logo {
+  color: #e28fd7;
+  text-shadow: 2px 2px 4px #51b9cc;
 }

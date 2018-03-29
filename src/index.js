@@ -10,6 +10,7 @@ import reducers from './reducers';
 import BooksList from './components/books_list';
 import ReviewForm from './components/review_form';
 import ReviewList from './components/review_list';
+import Nav from './components/nav';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -17,6 +18,7 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <div>
+        <Nav />
         <Switch>
           <Route path="/review/new" component={ReviewForm} />
           <Route path="/review/all" component={ReviewList} />
