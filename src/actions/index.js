@@ -5,9 +5,9 @@ export const CREATE_REVIEW = 'create_review';
 export const SELECTED_BOOK = 'selected_book';
 export const FETCH_REVIEWS = 'fetch_reviews';
 
-export function fetchBooks() {
+export function fetchBooks(list) {
   const nyKey = '4e1a6cdf3826470a9ec10ba51e15938e';
-  const URL = `http://api.nytimes.com/svc/books/v3/lists/current/series-books/json?api-key=${nyKey}`;
+  const URL = `http://api.nytimes.com/svc/books/v3/lists/current/${list}/json?api-key=${nyKey}`;
   const request = axios.get(URL);
 
   return {

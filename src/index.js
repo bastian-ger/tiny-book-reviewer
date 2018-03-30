@@ -7,10 +7,10 @@ import promise from 'redux-promise';
 
 import reducers from './reducers';
 
-import BooksList from './components/books_list';
 import ReviewForm from './components/review_form';
 import ReviewList from './components/review_list';
 import Nav from './components/nav';
+import ListSelection from './components/list_selection';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -22,7 +22,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/review/new" component={ReviewForm} />
           <Route path="/review/all" component={ReviewList} />
-          <Route path="/" component={BooksList} />
+          <Route path="/" component={ListSelection} />
         </Switch>
       </div>
     </BrowserRouter>

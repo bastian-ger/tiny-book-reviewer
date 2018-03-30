@@ -1,13 +1,16 @@
+/* extra space for navbar */
 body {
-  margin-top: 70px !important;
+  margin-top: 80px !important;
 }
 
-form label {
-  display: block;
-}
-
+/* books list */
 .img-fluid {
   width: 100%;
+}
+
+/* review form */
+form label {
+  display: block;
 }
 
 .article-special {
@@ -35,8 +38,17 @@ form label {
   background-color: #c1c4c7;
 }
 
+#selector {
+  width: 50vw;
+}
+
 /* navbar  */
 #logo {
   color: #e28fd7;
   text-shadow: 2px 2px 4px #51b9cc;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
 }
