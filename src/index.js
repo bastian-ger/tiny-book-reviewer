@@ -11,6 +11,7 @@ import ReviewForm from './components/review_form';
 import ReviewList from './components/review_list';
 import Nav from './components/nav';
 import ListSelection from './components/list_selection';
+import WeatherChecker from './components/weather_checker';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -20,6 +21,7 @@ ReactDOM.render(
       <div>
         <Nav />
         <Switch>
+          <Route path="/reading-weather" component={WeatherChecker} />
           <Route path="/review/new" component={ReviewForm} />
           <Route path="/review/all" component={ReviewList} />
           <Route path="/" component={ListSelection} />

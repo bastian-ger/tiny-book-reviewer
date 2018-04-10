@@ -15,7 +15,7 @@ class ReviewList extends Component {
 
     return (
       <div>
-        <h3 className="m-sm-3">This is an overview of all the submitted reviews</h3>
+        <h3 className="">This is an overview of all the submitted reviews</h3>
         {this.renderReviews()}
       </div>
     );
@@ -25,7 +25,7 @@ class ReviewList extends Component {
     return _.map(this.props.reviews, review => {
       return (
         <article
-          className="mt-3 mb-3 ml-1 mr-1 ml-sm-3 mr-sm-3 p-2 border border-danger article-usual"
+          className="mt-3 mb-3 p-2 border border-danger article-usual"
           key={review.id}>
           <h5>{review.title}</h5>
           <p>{review.categories}</p>

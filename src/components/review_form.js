@@ -45,7 +45,7 @@ class ReviewForm extends Component {
                 disabled="true"
                 value={this.state.categories}
                 onChange={this.handleChange}
-                />
+              />
             </div>
             <div>
               <label className="mt-3" htmlFor="title">Title:</label>
@@ -59,8 +59,8 @@ class ReviewForm extends Component {
                 onChange={this.handleChange}
                 maxlength="50"
                 aria-describedby="title-info"
-                />
-                <small className="form-text" id="title-info">maximum length: 50</small>
+              />
+              <small className="form-text" id="title-info">maximum length: 50</small>
             </div>
             <div>
               <label className="mt-3" htmlFor="content">Content of Your Review:</label>
@@ -73,8 +73,8 @@ class ReviewForm extends Component {
                 onChange={this.handleChange}
                 maxlength="1000"
                 aria-describedby="content-info"
-                />
-                <small className="form-text" id="content-info">maximum length: 1000</small>
+              />
+              <small className="form-text" id="content-info">maximum length: 1000</small>
             </div>
             <div>
               <p className="mt-3" id="errors"></p>

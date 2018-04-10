@@ -1,3 +1,8 @@
 #selector {
   width: 90vw;
 }
+
+/* weather forecast */
+#forecast-box {
+  width: 100%;
+}

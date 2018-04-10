@@ -16,6 +16,7 @@ const Nav = (props) => {
           <div className="navbar-nav">
             <Link className="nav-item nav-link text-light" to="/">Home</Link>
             <Link className="nav-item nav-link text-light" to="/review/all">Reviews</Link>
+            <Link className="nav-item nav-link text-light" to="/reading-weather">Reading Weather</Link>
           </div>
         </div>
       </div>
