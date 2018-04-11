@@ -17,6 +17,8 @@ const Nav = (props) => {
             <Link className="nav-item nav-link text-light" to="/">Home</Link>
             <Link className="nav-item nav-link text-light" to="/review/all">Reviews</Link>
             <Link className="nav-item nav-link text-light" to="/reading-weather">Reading Weather</Link>
+            <Link className="nav-item nav-link text-light" to="/about">About</Link>
+            <Link className="nav-item nav-link text-light" to="/faq">FAQ</Link>
           </div>
         </div>
       </div>

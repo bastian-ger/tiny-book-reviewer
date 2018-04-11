@@ -61,3 +61,8 @@ form label {
 .weather-border {
   border: 2px solid red;
 }
+
+/* fontawesome link */
+.purple {
+  color: #6a0c7d;
+}
