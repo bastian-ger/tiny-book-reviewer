@@ -23,15 +23,15 @@ class ReviewForm extends Component {
 
     if (!this.props.selectedBook) {
       return (
-        <div className="m-3">
+        <main className="m-1 m-sm-3">
           <p>Please select a book before you write a review!</p>
           <Link className="btn btn-primary mt-3" to="/">Click to Select a Book</Link>
-        </div>
+        </main>
       );
     }
     else {
       return (
-        <div className="m-1 m-sm-3">
+        <main className="m-1 m-sm-3">
           <h1>Write a review for: <span>{selectedBook}</span></h1>
           <p>Please fill out all red input fields correctly.</p>
           <form onSubmit={this.handleSubmit} className="form-group">
@@ -83,7 +83,7 @@ class ReviewForm extends Component {
             <button type="submit" className="btn btn-primary mr-3 mt-3">Submit</button>
             <Link className="btn btn-primary mt-3" to="/">Cancel</Link>
           </form>
-        </div>
+        </main>
       );
     }
   }

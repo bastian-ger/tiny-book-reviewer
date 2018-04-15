@@ -14,10 +14,10 @@ class ReviewList extends Component {
     console.log(this.props.reviews)
 
     return (
-      <div>
+      <main className="m-1 m-sm-3">
         <h3 className="">This is an overview of all the submitted reviews</h3>
         {this.renderReviews()}
-      </div>
+      </main>
     );
   }
 

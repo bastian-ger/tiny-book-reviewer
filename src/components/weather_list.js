@@ -5,7 +5,7 @@ class WeatherList extends Component {
 
   render() {
     return(
-      <div className="row">
+      <div className="row mt-1 mt-sm-2">
         {this.renderList()}
       </div>
     );
@@ -62,7 +62,7 @@ class WeatherList extends Component {
       return (
         <article
           key={data.dt}
-          className="col-6 col-sm-4 col-md-3 mt-3 mb-3 p-2 article-usual weather-border"
+          className="col-6 col-sm-4 col-md-3 mb-3 p-2 article-usual weather-border"
         >
           <h4 className="font-weight-bold">{`${day}, ${date.getHours()}:${dateStringMinutes}`}</h4>
           <img

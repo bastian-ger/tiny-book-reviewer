@@ -18,15 +18,15 @@ class WeatherChecker extends Component {
   render() {
 
     return(
-      <main>
+      <main className="m-1 m-sm-3">
         {this.state.isSelected &&
-          <button type="button" className="btn btn-primary"
+          <button type="button" className="btn btn-primary d-block mx-auto"
             onClick={this.onButtonClick}>
             Select a new city
           </button>
         }
         {!this.state.isSelected &&
-          <div>
+          <section>
             <h3>Do you want to check out your reading weather forecast?</h3>
             <p>Please fill out all red input fields correctly.</p>
             <form className="form-group row" onSubmit={this.handleSubmit}>
@@ -72,18 +72,19 @@ class WeatherChecker extends Component {
                 Submit
               </button>
             </form>
-          </div>}
+          </section>}
         {this.state.isSelected &&
-          <div>
+          <section>
             <WeatherForecast
               city={this.state.selectedCity}
               country={this.state.selectedCountry}>
             </WeatherForecast>
-            <button type="button" className="btn btn-primary mt-2 mb-2 mt-sm-3 mb-sm-3"
-              onClick={this.onButtonClick}>
-              Select a new city
-            </button>
-          </div>
+
+              <button type="button" className="btn btn-primary mt-2 mb-2 mt-sm-3 mb-sm-3 d-block mx-auto"
+                onClick={this.onButtonClick}>
+                Select a new city
+              </button>
+          </section>
         }
       </main>
           );

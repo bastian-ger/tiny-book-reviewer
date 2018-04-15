@@ -29,7 +29,7 @@ class WeatherForecast extends Component {
     const imgUrl = `https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`;
 
     return (
-      <div className="m-1">
+      <div>
         <h3>Your reading weather forecast for {data.city.name}</h3>
         <WeatherList data={data}></WeatherList>
       </div>

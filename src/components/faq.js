@@ -2,7 +2,7 @@ import React from 'react';
 
 const Faq = (props) => {
   return (
-    <div>
+    <main className="m-1 m-sm-3">
       <h3>Frequently Asked Questions</h3>
       <ul className="list-group mt-3">
         <li className="list-group-item">
@@ -12,7 +12,7 @@ const Faq = (props) => {
           <p>The reason is that this is just a fake FAQ!!</p>
         </li>
       </ul>
-    </div>
+    </main>
   );
 }
 

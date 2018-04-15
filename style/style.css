@@ -10,7 +10,7 @@ form label {
 
 .article-special {
   cursor: pointer;
-  background-color: #c1c4c7;
+  background-color: #d5c4df;
 }
 
 .article-special:hover,
@@ -30,7 +30,7 @@ form label {
 }
 
 .article-usual {
-  background-color: #c1c4c7;
+  background-color: #d5c4df;
 }
 
 #selector {
@@ -60,4 +60,9 @@ form label {
 /* fontawesome link */
 .purple {
   color: #6a0c7d;
+}
+
+/* changing button color */
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #6a0c7d !important;
 }
