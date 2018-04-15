@@ -4,12 +4,14 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
+import 'bootstrap';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import reducers from './reducers';
 
 import ReviewForm from './components/review_form';
 import ReviewList from './components/review_list';
-import Nav from './components/nav';
+import TheNavBar from './components/the_nav_bar';
 import ListSelection from './components/list_selection';
 import WeatherChecker from './components/weather_checker';
 import Footer from './components/footer';
@@ -22,7 +24,7 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <div>
-        <Nav />
+        <TheNavBar />
         <Switch>
           <Route path="/reading-weather" component={WeatherChecker} />
           <Route path="/review/new" component={ReviewForm} />
