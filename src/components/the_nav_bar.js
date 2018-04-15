@@ -24,7 +24,7 @@ class TheNavBar extends Component {
   render() {
     return(
       <div>
-        <Navbar color="dark" dark expand="md">
+        <Navbar color="dark" dark fixed="top" expand="md">
           <NavbarBrand id="logo" href="/">tiny book reviewer</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>

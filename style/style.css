@@ -1,3 +1,8 @@
+/* extra space for navbar */
+body {
+  margin-top: 70px !important;
+}
+
 /* books list */
 .img-fluid {
   width: 100%;
