@@ -7,7 +7,6 @@ import WeatherList from './weather_list';
 
 class WeatherForecast extends Component {
 
-
   componentDidMount() {
     const {city} = this.props;
     const {country} = this.props;
@@ -15,7 +14,6 @@ class WeatherForecast extends Component {
   }
 
   render() {
-
     if (!this.props.weather || this.props.weather.list.length < 1 || !this.props.weather.list[0].weather) {
       return (
         <div>
@@ -25,7 +23,6 @@ class WeatherForecast extends Component {
     }
 
     const data = this.props.weather;
-
     const imgUrl = `https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`;
 
     return (

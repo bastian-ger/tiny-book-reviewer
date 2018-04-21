@@ -53,8 +53,6 @@ export function fetchWeather(city, country) {
 
   const request = axios.get(`${ROOT_URL}q=${city},${country}&units=metric&appid=${OWM_KEY}`);
 
-  console.log('weather action creator');
-
   return {
     type: FETCH_WEATHER,
     payload: request

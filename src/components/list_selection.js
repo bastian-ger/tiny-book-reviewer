@@ -14,6 +14,7 @@ class ListSelection extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.onButtonClick = this.onButtonClick.bind(this);
   }
 
   render() {
@@ -29,38 +30,48 @@ class ListSelection extends Component {
         {!isSelected &&
           <Welcome />
         }
-        <form className="form-group" onSubmit={this.handleSubmit}>
-          <label htmlFor="selector">Choose your bestseller list!</label>
-          <select id="selector" className="form-control" name="list_selection"
-            value={this.state.selectedList} onChange={this.handleChange}>
-              <option value="" disabled="true">Choose here...</option>
-              <option value="picture-books">Children’s Picture Books</option>
-              <option value="series-books">Children&#39;s Series</option>
-              <option value="childrens-middle-grade-hardcover">
-                Childrens Middle Grade Hardcover
-              </option>
-              <option value="young-adult-hardcover">
-                Young Adult Hardcover
-              </option>
-              <option value="combined-print-and-e-book-fiction">
-                Combined Print & E-Book Fiction
-              </option>
-              <option value="hardcover-fiction">Hardcover Fiction</option>
-              <option value="combined-print-and-e-book-nonfiction">
-                Combined Print & E-Book Nonfiction
-              </option>
-              <option value="hardcover-nonfiction">Hardcover Nonfiction</option>
-              <option value="paperback-nonfiction">Paperback Nonfiction</option>
-              <option value="trade-fiction-paperback">
-                Paperback Trade Fiction
-              </option>
-              <option value="advice-how-to-and-miscellaneous">
-                Advice, How-To & Miscellaneous
-              </option>
-            </select>
-        </form>
+        {!isSelected &&
+          <form className="form-group" onSubmit={this.handleSubmit}>
+            <label htmlFor="selector">Choose your bestseller list!</label>
+            <select id="selector" className="form-control" name="list_selection"
+              value={this.state.selectedList} onChange={this.handleChange}>
+                <option value="" disabled="true">Choose here...</option>
+                <option value="picture-books">Children’s Picture Books</option>
+                <option value="series-books">Children&#39;s Series</option>
+                <option value="childrens-middle-grade-hardcover">
+                  Childrens Middle Grade Hardcover
+                </option>
+                <option value="young-adult-hardcover">
+                  Young Adult Hardcover
+                </option>
+                <option value="combined-print-and-e-book-fiction">
+                  Combined Print & E-Book Fiction
+                </option>
+                <option value="hardcover-fiction">Hardcover Fiction</option>
+                <option value="combined-print-and-e-book-nonfiction">
+                  Combined Print & E-Book Nonfiction
+                </option>
+                <option value="hardcover-nonfiction">Hardcover Nonfiction</option>
+                <option value="paperback-nonfiction">Paperback Nonfiction</option>
+                <option value="trade-fiction-paperback">
+                  Paperback Trade Fiction
+                </option>
+                <option value="advice-how-to-and-miscellaneous">
+                  Advice, How-To & Miscellaneous
+                </option>
+              </select>
+          </form>
+        }
         {isSelected &&
-          <BooksList selectedList={this.state.selectedList}></BooksList>
+          <div>
+            <BooksList selectedList={this.state.selectedList}></BooksList>
+            <button
+              type="button"
+              onClick={this.onButtonClick}
+              className="btn btn-primary mt-2 mt-sm-3 mb-2 mb-sm-3">
+              Change list
+            </button>
+          </div>
         }
       </div>
     );
@@ -73,13 +84,12 @@ class ListSelection extends Component {
   }
 
   handleSubmit(event) {
-    const list = this.props.selectedList;
     event.preventDefault;
-    this.fetchSelectedReview(list);
+  }
+
+  onButtonClick(event) {
+    window.location.reload(true);
   }
 }
 
 export default ListSelection;
-//export default connect(null, null)(ListSelection);
-
-//to do: now write new action creator, check reducer, reducers/index!

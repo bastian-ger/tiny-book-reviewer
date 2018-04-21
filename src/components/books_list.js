@@ -4,7 +4,6 @@ import { Link, withRouter } from 'react-router-dom';
 
 import { fetchBooks, selectBook } from '../actions/index';
 
-
 class BooksList extends Component {
   constructor(props) {
     super(props);
@@ -16,8 +15,8 @@ class BooksList extends Component {
     const {selectedList} = this.props;
     this.props.fetchBooks(selectedList);
   }
-  render() {
 
+  render() {
     if (!this.props.books.results) {
       return <div>Loading...</div>;
     }
@@ -30,6 +29,7 @@ class BooksList extends Component {
         </div>
     );
   }
+
   renderBooks() {
     return this.props.books.results.books.map( book => {
       return (
@@ -57,20 +57,16 @@ class BooksList extends Component {
 
   onSelectBook(book) {
     this.props.selectBook(book);
-    console.log(book);
     this.props.history.push("/review/new");
   }
 
   onPressBook(event, book) {
 
     if (event.key == 'Enter') {
-      console.log('key: ', event.key);
-      console.log('book: ', book);
       this.props.selectBook(book);
       this.props.history.push("/review/new");
     }
   }
-
 }
 
 function mapStateToProps(state) {
