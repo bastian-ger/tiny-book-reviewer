@@ -7,6 +7,10 @@ class WeatherList extends Component {
     return(
       <div className="row mt-1 mt-sm-2">
         {this.renderList()}
+        <p className="credit">
+          This weather data is from <a href="https://openweathermap.org/"
+          target="_blank">OpenWeatherMap</a>
+        </p>
       </div>
     );
   }
