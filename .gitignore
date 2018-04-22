@@ -2,4 +2,4 @@ bundle.js
 npm-debug.log
 .DS_Store
 /node_modules
-secrets.js
+secrets.env
