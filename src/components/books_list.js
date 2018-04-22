@@ -22,10 +22,18 @@ class BooksList extends Component {
     }
     return (
         <div className="">
-          <h3 className="">Write reviews for the current top 10 of the NY Times Children&#39;s Series bestseller list</h3>
-          <p className="">Click on one of the list items to write a review now</p>
+          <h3>
+            Write reviews for the current top 10 of the NY Times
+            <span> {this.props.books.results.display_name} </span>
+            bestseller list
+          </h3>
+          <p className="">Click on one of the list items to write a review now!</p>
           {this.renderBooks()}
-          <img className="mb-3" src="http://static01.nytimes.com/packages/images/developer/logos/poweredby_nytimes_200c.png" alt="New York Times Logo"/>
+          <img
+            className="mb-3"
+            src="http://static01.nytimes.com/packages/images/developer/logos/poweredby_nytimes_200c.png"
+            alt="New York Times Logo"
+          />
         </div>
     );
   }
