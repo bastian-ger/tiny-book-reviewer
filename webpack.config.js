@@ -1,16 +1,19 @@
 const Dotenv = require('dotenv-webpack');
+const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: __dirname,
+    // this is where the bundle.js will be saved
+    path: path.resolve(__dirname, 'docs'),
+    // this is where webpack-dev-server will serve its bundled files
     publicPath: '/',
     filename: 'bundle.js'
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: [
           {
