@@ -64,11 +64,17 @@ class ListSelection extends Component {
         }
         {isSelected &&
           <div>
+            <button
+              type="button"
+              onClick={this.onButtonClick}
+              className="btn btn-primary mt-2 mt-sm-3 mb-2 mb-sm-3 d-block mx-auto">
+              Change list
+            </button>
             <BooksList selectedList={this.state.selectedList}></BooksList>
             <button
               type="button"
               onClick={this.onButtonClick}
-              className="btn btn-primary mt-2 mt-sm-3 mb-2 mb-sm-3">
+              className="btn btn-primary mt-2 mt-sm-3 mb-2 mb-sm-3 d-block mx-auto">
               Change list
             </button>
           </div>
