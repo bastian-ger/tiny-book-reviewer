@@ -20,7 +20,7 @@ class WeatherChecker extends Component {
     return(
       <main className="m-1 m-sm-3">
         {this.state.isSelected &&
-          <button type="button" className="btn btn-primary d-block mx-auto"
+          <button type="button" className="btn btn-primary mb-2 mb-sm-1 d-block mx-auto"
             onClick={this.onButtonClick}>
             Select a new city
           </button>
