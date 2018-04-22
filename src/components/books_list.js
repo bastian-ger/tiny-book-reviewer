@@ -20,22 +20,27 @@ class BooksList extends Component {
     if (!this.props.books.results) {
       return <div>Loading...</div>;
     }
-    return (
-        <div className="">
-          <h3>
-            Write reviews for the current top 10 of the NY Times
-            <span> {this.props.books.results.display_name} </span>
-            bestseller list
-          </h3>
-          <p className="">Click on one of the list items to write a review now!</p>
-          {this.renderBooks()}
-          <img
-            className="mb-3"
-            src="http://static01.nytimes.com/packages/images/developer/logos/poweredby_nytimes_200c.png"
-            alt="New York Times Logo"
-          />
-        </div>
-    );
+    else if (this.props.books.status !== 'OK' && this.props.books.results) {
+      return <div>Unfortunately, the list could not be loaded! :-(</div>
+    }
+    else {
+      return (
+          <div>
+            <h3>
+              Write reviews for the current top 10 of the NY Times
+              <span> {this.props.books.results.display_name} </span>
+              bestseller list
+            </h3>
+            <p className="">Click on one of the list items to write a review now!</p>
+            {this.renderBooks()}
+            <img
+              className="mb-3"
+              src="http://static01.nytimes.com/packages/images/developer/logos/poweredby_nytimes_200c.png"
+              alt="New York Times Logo"
+            />
+          </div>
+      );
+    }
   }
 
   renderBooks() {

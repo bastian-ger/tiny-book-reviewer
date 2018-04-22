@@ -21,16 +21,22 @@ class WeatherForecast extends Component {
         </div>
       );
     }
-
-    const data = this.props.weather;
-    const imgUrl = `https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`;
-
-    return (
+    else if (this.props.weather.list[0].weather && this.props.weather.cod !== '200') {
       <div>
-        <h3>Your reading weather forecast for {data.city.name}</h3>
-        <WeatherList data={data}></WeatherList>
+        <p>Unfortunately, the weather data could not be loaded!</p>
       </div>
-    );
+    }
+    else {
+      const data = this.props.weather;
+      const imgUrl = `https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`;
+
+      return (
+        <div>
+          <h3>Your reading weather forecast for {data.city.name}</h3>
+          <WeatherList data={data}></WeatherList>
+        </div>
+      );
+    }
   }
 }
 
