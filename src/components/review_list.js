@@ -11,12 +11,21 @@ class ReviewList extends Component {
   }
 
   render() {
-    return (
-      <main className="m-1 m-sm-3">
-        <h3 className="">This is an overview of all the submitted reviews</h3>
-        {this.renderReviews()}
-      </main>
-    );
+    if (!this.props.reviews) {
+      return (
+      <div>
+        <p>Loading...</p>
+      </div>
+      );
+    }
+    else {
+      return (
+        <main className="m-1 m-sm-3">
+          <h3 className="">This is an overview of all the submitted reviews</h3>
+          {this.renderReviews()}
+        </main>
+      );
+    }
   }
 
   renderReviews() {
