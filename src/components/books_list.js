@@ -35,7 +35,7 @@ class BooksList extends Component {
             {this.renderBooks()}
             <img
               className="mb-3"
-              src="http://static01.nytimes.com/packages/images/developer/logos/poweredby_nytimes_200c.png"
+              src="https://static01.nytimes.com/packages/images/developer/logos/poweredby_nytimes_200c.png"
               alt="New York Times Logo"
             />
           </div>

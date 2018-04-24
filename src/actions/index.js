@@ -8,7 +8,7 @@ export const FETCH_WEATHER = 'fetch_weather';
 
 export function fetchBooks(list) {
   const nyKey = process.env.NY_KEY;
-  const URL = `http://api.nytimes.com/svc/books/v3/lists/current/${list}/json?api-key=${nyKey}`;
+  const URL = `https://api.nytimes.com/svc/books/v3/lists/current/${list}/json?api-key=${nyKey}`;
   const request = axios.get(URL);
 
   return {
@@ -17,7 +17,7 @@ export function fetchBooks(list) {
   };
 }
 
-const ROOT_URL = 'http://reduxblog.herokuapp.com/api';
+const ROOT_URL = 'https://reduxblog.herokuapp.com/api';
 const API_KEY = process.env.RB_KEY;
 
 export function createReview(values, callback) {
