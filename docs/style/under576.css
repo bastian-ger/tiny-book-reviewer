@@ -1,0 +1,14 @@
+/* extra space for navbar */
+body {
+  margin-top: 66px !important;
+}
+
+/* list selection */
+#selector {
+  width: 90vw;
+}
+
+/* weather forecast */
+#forecast-box {
+  width: 100%;
+}
