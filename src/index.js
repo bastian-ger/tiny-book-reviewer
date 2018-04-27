@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 import 'bootstrap';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -22,7 +22,7 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-    <BrowserRouter>
+    <HashRouter>
       <div>
         <TheNavBar />
         <Switch>
@@ -35,6 +35,6 @@ ReactDOM.render(
         </Switch>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   </Provider>
   , document.querySelector('.container-react'));
