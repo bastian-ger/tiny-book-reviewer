@@ -22,7 +22,7 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-    <HashRouter basename="/tiny-book-reviewer">
+    <HashRouter>
       <div>
         <TheNavBar />
         <Switch>
