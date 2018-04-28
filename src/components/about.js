@@ -21,7 +21,6 @@ const About = (props) => {
         <li>OpenWeatherMap</li>
         <li>New York Times Books API</li>
         <li>Redux Blog Post API</li>
-        <li>Dotenv Webpack</li>
         <li>Github Desktop</li>
         <li>Axios</li>
         <li>Lodash</li>
