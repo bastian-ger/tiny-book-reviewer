@@ -75,7 +75,7 @@ class BooksList extends Component {
 
   onPressBook(event, book) {
 
-    if (event.key === 'Enter') {
+    if (event.key == 'Enter') {
       this.props.selectBook(book);
       this.props.history.push("/review/new");
     }
