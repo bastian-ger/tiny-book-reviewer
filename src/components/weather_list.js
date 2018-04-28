@@ -65,7 +65,7 @@ class WeatherList extends Component {
 
       return (
         <article
-          key={data.dt}
+          key={item.dt}
           className="col-6 col-sm-4 col-md-3 mb-3 p-2 article-usual weather-border"
         >
           <h4 className="font-weight-bold">{`${day}, ${date.getHours()}:${dateStringMinutes}`}</h4>

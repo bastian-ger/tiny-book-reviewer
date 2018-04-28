@@ -51,7 +51,7 @@ class BooksList extends Component {
           onKeyUp={() => this.onPressBook(window.event, book.title)}
           className="row mt-3 mb-3 border border-danger article-special"
           key={book.primary_isbn13}
-          tabindex="0"
+          tabIndex="0"
         >
           <div className="col-sm-9 p-2">
             <h5>Title: {book.title}</h5>
