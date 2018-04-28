@@ -42,7 +42,10 @@ class TheNavBar extends Component {
                 <NavLink href="/faq">FAQ</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="">GitHub</NavLink>
+                <NavLink
+                  href="https://github.com/bastian-ger/tiny-book-reviewer">
+                  GitHub
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>

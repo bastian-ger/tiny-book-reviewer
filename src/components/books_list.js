@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import { fetchBooks, selectBook } from '../actions/index';
 
@@ -75,7 +75,7 @@ class BooksList extends Component {
 
   onPressBook(event, book) {
 
-    if (event.key == 'Enter') {
+    if (event.key === 'Enter') {
       this.props.selectBook(book);
       this.props.history.push("/review/new");
     }

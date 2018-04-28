@@ -26,7 +26,7 @@ class WeatherList extends Component {
 
     return _.map(data.list, (item) => {
       dateString = item.dt + '000';
-      dateValue = parseInt(dateString);
+      dateValue = parseInt(dateString, 10);
 
       date = new Date(dateValue);
       switch (date.getDay()) {

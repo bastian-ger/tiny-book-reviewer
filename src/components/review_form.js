@@ -57,7 +57,7 @@ class ReviewForm extends Component {
                 required="true"
                 value={this.state.title}
                 onChange={this.handleChange}
-                maxlength="50"
+                maxLength="50"
                 aria-describedby="title-info"
               />
               <small className="form-text" id="title-info">maximum length: 50</small>
@@ -71,7 +71,7 @@ class ReviewForm extends Component {
                 required="true"
                 value={this.state.content}
                 onChange={this.handleChange}
-                maxlength="1000"
+                maxLength="1000"
                 aria-describedby="content-info"
               />
               <small className="form-text" id="content-info">maximum length: 1000</small>

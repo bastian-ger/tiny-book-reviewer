@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 import BooksList from './books_list';
 import Welcome from './welcome';
@@ -90,7 +88,7 @@ class ListSelection extends Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault;
+    event.preventDefault();
   }
 
   onButtonClick(event) {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { fetchWeather } from '../actions/index';
 import WeatherList from './weather_list';
 
@@ -22,13 +21,14 @@ class WeatherForecast extends Component {
       );
     }
     else if (this.props.weather.list[0].weather && this.props.weather.cod !== '200') {
-      <div>
-        <p>Unfortunately, the weather data could not be loaded!</p>
-      </div>
+      return (
+        <div>
+          <p>Unfortunately, the weather data could not be loaded!</p>
+        </div>
+      );
     }
     else {
       const data = this.props.weather;
-      const imgUrl = `https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`;
 
       return (
         <div>
