@@ -7,7 +7,7 @@ export const FETCH_REVIEWS = 'fetch_reviews';
 export const FETCH_WEATHER = 'fetch_weather';
 
 export function fetchBooks(list) {
-  const nyKey = process.env.NY_KEY;
+  const nyKey = '4e1a6cdf3826470a9ec10ba51e15938e';
   const URL = `https://api.nytimes.com/svc/books/v3/lists/current/${list}/json?api-key=${nyKey}`;
   const request = axios.get(URL);
 
@@ -18,7 +18,7 @@ export function fetchBooks(list) {
 }
 
 const ROOT_URL = 'https://reduxblog.herokuapp.com/api';
-const API_KEY = process.env.RB_KEY;
+const API_KEY = 'neversaynever53621';
 
 export function createReview(values, callback) {
 
@@ -49,7 +49,7 @@ export function fetchReviews() {
 
 export function fetchWeather(city, country) {
   const ROOT_URL = 'https://api.openweathermap.org/data/2.5/forecast?';
-  const OWM_KEY = process.env.OWM_KEY;
+  const OWM_KEY = 'ee020743c5e7b4fb9abf4f547cc590ed';
 
   const request = axios.get(`${ROOT_URL}q=${city},${country}&units=metric&appid=${OWM_KEY}`);
 

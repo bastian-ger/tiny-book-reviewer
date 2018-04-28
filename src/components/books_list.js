@@ -48,7 +48,7 @@ class BooksList extends Component {
       return (
         <article
           onClick={() => this.onSelectBook(book.title)}
-          onKeyUp={() => this.onPressBook(event, book.title)}
+          onKeyUp={() => this.onPressBook(window.event, book.title)}
           className="row mt-3 mb-3 border border-danger article-special"
           key={book.primary_isbn13}
           tabindex="0"

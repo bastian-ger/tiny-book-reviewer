@@ -1,11 +1,10 @@
-const Dotenv = require('dotenv-webpack');
 const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     // this is where the bundle.js will be saved
-    path: path.resolve(__dirname, 'docs'),
+    path: path.resolve(__dirname, 'public'),
     // this is where webpack-dev-server will serve its bundled files
     publicPath: '/',
     filename: 'bundle.js'
@@ -33,10 +32,5 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     contentBase: './'
-  },
-  plugins: [
-    new Dotenv({
-      path: './secrets.env'
-    })
-  ]
+  }
 };
