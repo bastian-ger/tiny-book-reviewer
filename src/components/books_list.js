@@ -33,11 +33,13 @@ class BooksList extends Component {
             </h3>
             <p className="">Click on one of the list items to write a review now!</p>
             {this.renderBooks()}
-            <img
-              className="mb-3"
-              src="https://static01.nytimes.com/packages/images/developer/logos/poweredby_nytimes_200c.png"
-              alt="New York Times Logo"
-            />
+            <a href="http://developer.nytimes.com/">
+              <img
+                className="mb-3"
+                src="https://static01.nytimes.com/packages/images/developer/logos/poweredby_nytimes_200c.png"
+                alt="New York Times Logo"
+              />
+            </a>
           </div>
       );
     }
