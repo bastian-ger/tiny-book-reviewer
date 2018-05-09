@@ -75,3 +75,34 @@ form label {
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: #6a0c7d !important;
 }
+
+@media only screen and (max-width:575px) {
+  /* extra space for navbar */
+  body {
+    margin-top: 66px !important;
+  }
+
+  /* list selection */
+  #selector {
+    width: 90vw;
+  }
+
+  /* weather forecast */
+  #forecast-box {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  html {
+    font-size: 125%;
+  }
+}
+
+@media only screen and (min-width:1200px) {
+  body {
+    width: 1200px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}

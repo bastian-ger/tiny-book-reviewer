@@ -5,6 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 import 'bootstrap';
+import './style/style.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import reducers from './reducers';
