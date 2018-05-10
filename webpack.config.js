@@ -1,5 +1,4 @@
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: ['core-js/fn/promise', './src/index.js'],
@@ -26,20 +25,12 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       }
     ]
-  },
+},
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
   devServer: {
     historyApiFallback: true,
     contentBase: './'
-  },
-  // only use DefinePlugin and UglifyJSPlugin for production not for development
-  // ensures that the production build of react is used
-  plugins: [
-    new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify('production')
-    }),
-    new webpack.optimize.UglifyJsPlugin()
- ]
+  }
 };
