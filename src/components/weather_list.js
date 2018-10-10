@@ -9,7 +9,7 @@ class WeatherList extends Component {
         {this.renderList()}
         <p className="credit">
           This weather data is from <a href="https://openweathermap.org/"
-          target="_blank">OpenWeatherMap</a>
+          target="_blank" rel="noopener noreferrer">OpenWeatherMap</a>
         </p>
       </div>
     );

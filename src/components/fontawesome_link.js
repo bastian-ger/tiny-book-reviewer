@@ -8,7 +8,7 @@ import React from 'react';
 const FontAwesomeLink = (props) => {
   return (
     <div className="d-inline">
-      <a href={props.url} target="_blank">
+      <a href={props.url} target="_blank" rel="noopener noreferrer">
         <i className={props.classes.join(' ')} aria-label={props.name}></i>
       </a>
     </div>
