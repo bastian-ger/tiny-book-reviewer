@@ -20,7 +20,3 @@ forecast for the next 5 days. You can read all reviews when clicking on
 
 ## Known Bugs
 - console shows unidentified *Uncaught Syntax Error*
-
-## Further Information
-This app is published at:
-[https://tiny-book-reviewer.herokuapp.com/](https://tiny-book-reviewer.herokuapp.com/)
